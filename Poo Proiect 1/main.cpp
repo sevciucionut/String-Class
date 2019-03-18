@@ -9,5 +9,4 @@ int main() {
     cin >> b;
     a=a+b;
     cout << a;
-
 }
