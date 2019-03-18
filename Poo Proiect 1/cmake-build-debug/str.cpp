@@ -1,0 +1,121 @@
+//
+// Created by Sevciuc on 18.03.2019.
+//
+
+#include "str.h"
+
+using namespace std;
+
+str::str(int size) : size_(size) {
+    if (size <= 0) {
+        s_ = NULL;
+    } else {
+        s_ = new char[size_];
+    }
+}
+
+str::str(const str &other) : size_(other.size_) {
+    if (size_ <= 0) {
+        s_ = NULL;
+    } else {
+        s_ = new char[size_];
+        for (int i = 0; i < size_; i++) {
+            s_[i] = other.s_[i];
+        }
+    }
+}
+
+str::~str() {
+    if (s_ != NULL) {
+        delete[] s_;
+    }
+}
+
+char &str::operator[](int pos) {
+    return s_[pos];
+}
+
+bool str::operator==(str &s1) {
+    if (s1.size_ != size_) {
+        return false;
+    }
+    for (int i = 0; i < size_; i++) {
+        if (s1.s_[i] != s_[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+str &str::operator=(const str &other) {
+    if (&other != this) {
+        for (int i = 0; i < size_; i++) {
+            s_[i] = other.s_[i];
+        }
+    }
+}
+
+bool str::operator<(str &s1) {
+    int size;
+    if (s1.size_ < size_) {
+        size = s1.size_;
+    } else {
+        size = size_;
+    }
+
+    for (int i = 0; i < size; i++) {
+        if (s1.s_[i] < s_[i]) {
+            return false;
+        } else if (s1.s_[i] > s_[i]) {
+            return true;
+        }
+    }
+
+    if (s1.size_ > size_) {
+        return true;
+    }
+    return false;
+}
+
+bool str::operator>(str &s1) {
+    int size;
+    if (s1.size_ < size_) {
+        size = s1.size_;
+    } else {
+        size = size_;
+    }
+
+    for (int i = 0; i < size; i++) {
+        if (s1.s_[i] > s_[i]) {
+            return false;
+        } else if (s1.s_[i] < s_[i]) {
+            return true;
+        }
+    }
+
+    if (s1.size_ < size_) {
+        return true;
+    }
+    return false;
+}
+
+str &str::operator+(str &s1) {
+    for (int i = size_; i < size_+s1.size_; i++) {
+        s_[i]=s1.s_[i-size_];
+    }
+    size_=size_+s1.size_;
+}
+
+istream &operator>>(istream &in, str &s) {
+    for (int i = 0; i < s.Size(); i++) {
+        in >> s[i];
+    }
+    return in;
+}
+
+ostream &operator<<(ostream &out, str &s) {
+    for (int i = 0; i < s.Size(); i++) {
+        out << s[i];
+    }
+    return out;
+}
