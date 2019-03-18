@@ -49,10 +49,14 @@ bool str::operator==(str &s1) {
 
 str &str::operator=(const str &other) {
     if (&other != this) {
-        for (int i = 0; i < size_; i++) {
+        s_ = new char[other.size_];
+        size_ = other.size_;
+        for (int i = 0; i < other.size_; i++) {
             s_[i] = other.s_[i];
         }
+
     }
+
 }
 
 bool str::operator<(str &s1) {
@@ -100,10 +104,10 @@ bool str::operator>(str &s1) {
 }
 
 str &str::operator+(str &s1) {
-    for (int i = size_; i < size_+s1.size_; i++) {
-        s_[i]=s1.s_[i-size_];
+    for (int i = size_; i < size_ + s1.size_; i++) {
+        s_[i] = s1.s_[i - size_];
     }
-    size_=size_+s1.size_;
+    size_ = size_ + s1.size_;
 }
 
 istream &operator>>(istream &in, str &s) {
