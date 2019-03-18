@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/POO GIT/String-Class/Poo Proiect 1/main.cpp" "D:/POO GIT/String-Class/Poo Proiect 1/cmake-build-debug/CMakeFiles/Poo_Proiect_1.dir/main.cpp.obj"
+  "D:/POO GIT/String-Class/Poo Proiect 1/cmake-build-debug/str.cpp" "D:/POO GIT/String-Class/Poo Proiect 1/cmake-build-debug/CMakeFiles/Poo_Proiect_1.dir/str.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

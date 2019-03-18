@@ -149,6 +149,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\Poo_Proiect_1.dir\build.make CMakeFiles/Poo_Proiect_1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+str.obj: str.cpp.obj
+
+.PHONY : str.obj
+
+# target to build an object file
+str.cpp.obj:
+	$(MAKE) -f CMakeFiles\Poo_Proiect_1.dir\build.make CMakeFiles/Poo_Proiect_1.dir/str.cpp.obj
+.PHONY : str.cpp.obj
+
+str.i: str.cpp.i
+
+.PHONY : str.i
+
+# target to preprocess a source file
+str.cpp.i:
+	$(MAKE) -f CMakeFiles\Poo_Proiect_1.dir\build.make CMakeFiles/Poo_Proiect_1.dir/str.cpp.i
+.PHONY : str.cpp.i
+
+str.s: str.cpp.s
+
+.PHONY : str.s
+
+# target to generate assembly for a file
+str.cpp.s:
+	$(MAKE) -f CMakeFiles\Poo_Proiect_1.dir\build.make CMakeFiles/Poo_Proiect_1.dir/str.cpp.s
+.PHONY : str.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,6 +188,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... str.obj
+	@echo ... str.i
+	@echo ... str.s
 .PHONY : help
 
 

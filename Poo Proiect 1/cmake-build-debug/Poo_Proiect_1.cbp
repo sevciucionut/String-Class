@@ -80,6 +80,48 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/.idea/.name">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/.idea/Poo Proiect 1.iml">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/.idea/encodings.xml">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/.idea/misc.xml">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/.idea/modules.xml">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/.idea/vcs.xml">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/.idea/workspace.xml">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/CMakeLists.txt">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/cmake-build-debug/CMakeCache.txt">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/cmake-build-debug/Makefile">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/cmake-build-debug/Poo_Proiect_1.cbp">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/cmake-build-debug/cmake_install.cmake">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/cmake-build-debug/str.cpp">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
+		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/cmake-build-debug/str.h">
+			<Option target="Poo_Proiect_1"/>
+		</Unit>
 		<Unit filename="D:/POO GIT/String-Class/Poo Proiect 1/main.cpp">
 			<Option target="Poo_Proiect_1"/>
 		</Unit>
