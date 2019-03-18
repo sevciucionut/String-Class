@@ -28,16 +28,20 @@ int main() {
         cout << s3;
     }
 
-    if(s1 < s2){
-        cout<<"\nStringul "<<s1<<" < "<<s2;
+    if (s1 < s2) {
+        cout << "\nStringul " << s1 << " < " << s2;
     }
 
-    if(s3 > s2) {
-        cout<<"\nStringul "<<s3<<" > "<<s2;
+    if (s3 > s2) {
+        cout << "\nStringul " << s3 << " > " << s2;
     }
 
-    s1=s2+s3;
-    cout<<"\nConcatenarea s2 + s3 este: "<<s1;
+    s1 = s2 + s3;
+    cout << "\nConcatenarea s2 + s3 este: " << s1;
+
+    cout << "\nCaracterul de pe pozitia 0  din s1 este: " << s1[0];
+
+    cout << "\nLungimea lui s1 este: " << s1.Size();
 
 
 }
