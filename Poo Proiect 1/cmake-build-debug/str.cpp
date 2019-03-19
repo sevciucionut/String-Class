@@ -4,12 +4,15 @@
 
 #include "str.h"
 
-using namespace std;
+//using namespace std;
+
+str::str() {
+    s_ = NULL;
+    size_ = 0;
+}
 
 str::str(int size) : size_(size) {
-    if (size <= 0) {
-        s_ = NULL;
-    } else {
+    if (size >= 0) {
         s_ = new char[size_];
     }
 }
@@ -54,12 +57,16 @@ str &str::operator=(const str &other) {
         for (int i = 0; i < other.size_; i++) {
             s_[i] = other.s_[i];
         }
-
     }
 
+    return *this;
 }
 
 bool str::operator<(str &s1) {
+
+    //comparam litera cu litera, prima litera aratandu-ne in ce ordine lexicografica sunt stringurile
+    //daca s1 e prefixul lui s_, sau invers, cel cu lungimea mai mare este mai mare.
+
     int size;
     if (s1.size_ < size_) {
         size = s1.size_;
@@ -82,6 +89,10 @@ bool str::operator<(str &s1) {
 }
 
 bool str::operator>(str &s1) {
+
+    //comparam litera cu litera, prima litera aratandu-ne in ce ordine lexicografica sunt stringurile
+    //daca s1 e prefixul lui s_, sau invers, cel cu lungimea mai mare este mai mare.
+
     int size;
     if (s1.size_ < size_) {
         size = s1.size_;
@@ -108,6 +119,8 @@ str &str::operator+(str &s1) {
         s_[i] = s1.s_[i - size_];
     }
     size_ = size_ + s1.size_;
+
+    return *this;
 }
 
 istream &operator>>(istream &in, str &s) {

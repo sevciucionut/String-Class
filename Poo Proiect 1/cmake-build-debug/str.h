@@ -16,7 +16,8 @@ class str {
 
 public:
 
-    str(int size = 0);
+    str();
+    str(int size);
     str(const str &other);
     ~str();
 
