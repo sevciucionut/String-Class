@@ -4,7 +4,7 @@
 
 #include "str.h"
 
-//using namespace std;
+using namespace std;
 
 str::str() {
     s_ = NULL;
@@ -114,13 +114,21 @@ bool str::operator>(str &s1) {
     return false;
 }
 
-str &str::operator+(str &s1) {
-    for (int i = size_; i < size_ + s1.size_; i++) {
-        s_[i] = s1.s_[i - size_];
-    }
-    size_ = size_ + s1.size_;
+str str::operator+(str &s1) {
+    str s2;
+    s2.size_ = size_ + s1.size_;
+    s2.s_ = new char[s2.size_];
 
-    return *this;
+    for (int i = 0; i < size_; i++) {
+        s2.s_[i] = s_[i];
+    }
+
+    for (int i = size_; i < size_ + s1.size_; i++) {
+        s2.s_[i] = s1.s_[i - size_];
+    }
+    //size_ = size_ + s1.size_;
+
+    return s2;
 }
 
 istream &operator>>(istream &in, str &s) {
@@ -130,7 +138,7 @@ istream &operator>>(istream &in, str &s) {
     return in;
 }
 
-ostream &operator<<(ostream &out, str &s) {
+ostream &operator<<(ostream &out, str s) {
     for (int i = 0; i < s.Size(); i++) {
         out << s[i];
     }

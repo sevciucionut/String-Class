@@ -33,11 +33,12 @@ public:
 
     bool operator>(str &s1);
 
-    str &operator+(str &s1);
+    str operator+(str &s1);
 
-};
+    //friend ostream &operator<<(ostream &out, str s);
+    };
 
 istream &operator>>(istream &in, str &s);
-ostream &operator<<(ostream &out, str &s);
+ostream &operator<<(ostream &out, str s);
 
 #endif //POO_PROIECT_1_STR_H

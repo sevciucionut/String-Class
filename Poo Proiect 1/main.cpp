@@ -36,12 +36,9 @@ int main() {
         cout << "\nStringul " << s3 << " > " << s2;
     }
 
-    s1 = s2 + s3;
-    cout << "\nConcatenarea s2 + s3 este: " << s1;
+    cout << "\nConcatenarea s2 + s3 este: " << s2 + s3 ;
 
     cout << "\nCaracterul de pe pozitia 0  din s1 este: " << s1[0];
 
     cout << "\nLungimea lui s1 este: " << s1.Size();
-
-
 }
