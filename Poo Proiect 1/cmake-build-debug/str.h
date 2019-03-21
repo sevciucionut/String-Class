@@ -18,6 +18,8 @@ public:
 
     str();
     str(int size);
+    str(char s[]);
+    str(char s);
     str(const str &other);
     ~str();
 
@@ -35,8 +37,10 @@ public:
 
     str operator+(str &s1);
 
-    //friend ostream &operator<<(ostream &out, str s);
-    };
+    void set_char(char s);
+
+    void set_str(char s[]);
+};
 
 istream &operator>>(istream &in, str &s);
 ostream &operator<<(ostream &out, str s);

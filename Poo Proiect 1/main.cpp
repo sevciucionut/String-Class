@@ -1,7 +1,7 @@
 #include <iostream>
 #include "cmake-build-debug/str.h"
 
-using namespace std;
+//using namespace std;
 
 int main() {
     int size1, size2;
@@ -36,9 +36,26 @@ int main() {
         cout << "\nStringul " << s3 << " > " << s2;
     }
 
+    if (s3 == s2) {
+        cout << "\nStringul " << s3 << " = " << s2;
+    }
+
     cout << "\nConcatenarea s2 + s3 este: " << s2 + s3 ;
 
     cout << "\nCaracterul de pe pozitia 0  din s1 este: " << s1[0];
 
     cout << "\nLungimea lui s1 este: " << s1.Size();
+
+    str s4('c');
+    cout<<"\nStringul s4 este: "<<s4;
+
+    str s5;
+    s5.set_char('d');
+    cout<<"\nStringul s5 este: "<<s5;
+
+    s5.set_str("altfel");
+    cout<<"\nStringul s5 devine: "<<s5;
+
+    str s6("Merg toate comenzile");
+    cout<<"\nStringul s6 este: "<<s6;
 }

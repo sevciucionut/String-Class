@@ -4,7 +4,7 @@
 
 #include "str.h"
 
-using namespace std;
+//using namespace std;
 
 str::str() {
     s_ = NULL;
@@ -27,6 +27,26 @@ str::str(const str &other) : size_(other.size_) {
         }
     }
 }
+
+str::str(char s) {
+    s_=new char[1];
+    s_[0]=s;
+    size_=1;
+}
+
+str::str(char s[]) {
+    int nr = 0, i = 0;
+    while (s[i] != NULL) {
+        i++;
+        nr++;
+    }
+    s_ = new char[nr];
+    size_ = nr;
+    for (i = 0; i < nr; i++) {
+        s_[i] = s[i];
+    }
+}
+
 
 str::~str() {
     if (s_ != NULL) {
@@ -129,6 +149,24 @@ str str::operator+(str &s1) {
     //size_ = size_ + s1.size_;
 
     return s2;
+}
+void str::set_char(char s) {
+    s_ = new char[1];
+    s_[0] = s;
+    size_ = 1;
+}
+
+void str::set_str(char *s) {
+    int nr = 0, i = 0;
+    while (s[i] != NULL) {
+        i++;
+        nr++;
+    }
+    s_ = new char[nr];
+    size_ = nr;
+    for (i = 0; i < nr; i++) {
+        s_[i] = s[i];
+    }
 }
 
 istream &operator>>(istream &in, str &s) {
