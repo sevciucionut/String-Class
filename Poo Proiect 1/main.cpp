@@ -53,8 +53,8 @@ int main() {
     s5.set_char('d');
     cout<<"\nStringul s5 este: "<<s5;
 
-    s5.set_str("altfel");
-    cout<<"\nStringul s5 devine: "<<s5;
+    s1.set_str("altfel");
+    cout<<"\nStringul s1 devine: "<<s1;
 
     str s6("Merg toate comenzile");
     cout<<"\nStringul s6 este: "<<s6;
